@@ -1,0 +1,2 @@
+/home/nathanhan/fakedata/HG01372.20140404.vcf.gz
+/home/nathanhan/fakedata/HG01360.20140404.vcf.gz
