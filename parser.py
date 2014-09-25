@@ -8,7 +8,7 @@
 #	4)Converts chromosome postion to genome-wide globabl position 
 #	5)Throws out refseq (will need to fetch from separate fasta)
 #Will Add:
-#	1)try/finally block for opening file handles
+#	1)try/finally block for opening file handles -> error messages on cmd line
 #	2)with block for opening file handles
 #	3)print errors and usage instructions on cmdline -> more features: zip/unzipped list,etc.
 #	4)verify there are no memory issues: csv reader opens line by line?
@@ -64,7 +64,7 @@ for UnzippedItem in UnzippedvcfList #for every gVCF
     	for LineCounter in range(FirstDataLine):
     		next(tsvin, None)
 
-        #do the actual reading and writing wih the actual data
+        #do the actual reading and writing with the actual data
         for rowcontent in tsvin:#for every row in gVCF
             #store each attribute into variable
         	chromosome = rowcontent[0]
@@ -73,7 +73,7 @@ for UnzippedItem in UnzippedvcfList #for every gVCF
             info = rowcontent[7]
             data = rowcontent[9]
             #do some necessary conversions
-            
+
 
         	count = int(row[4])
         	if count > 0:
